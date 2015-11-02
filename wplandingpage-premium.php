@@ -59,7 +59,7 @@ function my_plugin_register_required_plugins() {
 $updater = new WPLP_Updater( __FILE__ );
 $updater->set_username( 'boluge' );
 $updater->set_repository( 'wplp-plugin' );
-$updater->authorize( '59318b3b7ac2c66b73119a7985ec24716e40d0c2' );
+$updater->authorize( '025f50af55efaea39c44ca6c1cab78ccbc3ef76d' );
 $updater->initialize();
 
 /**
