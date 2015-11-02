@@ -32,7 +32,7 @@ if( ! class_exists( 'WPLP_Updater' ) ){
 $updater = new WPLP_Updater( __FILE__ );
 $updater->set_username( 'boluge' );
 $updater->set_repository( 'wplp-plugin' );
-$updater->authorize( '9f67041cf23debbf2f2718d073c1eb7ebbf87487' );
+$updater->authorize( '59318b3b7ac2c66b73119a7985ec24716e40d0c2' );
 $updater->initialize();
 
 /**
