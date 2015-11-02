@@ -3,10 +3,10 @@
 		<header class="top-line top-line-text">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
-						<div class="bloc bloc-editor"><?php wplp_editable_text('free1_logo', 'Logo'); ?></div>
+					<div class="col-md-3">
+						<div class="bloc bloc-editor"><?php wplp_editable_text('free1_logo', 'Your Logo'); ?></div>
 					</div>
-					<div class="col-md-12">
+					<div class="col-md-9">
 						<div class="bloc bloc-menu">
 							<?php wplp_editable_menu('free1_menu_1'); ?>
 						</div>
@@ -15,27 +15,29 @@
 			</div>
 		</header>
 
-		<section class="header-content header-content-text header-content-btn-cta2">
+		<section class="header-content header-content-btn-cta2 header-content-text">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10">
-						<div class="bloc bloc-editor bloc-header">
-							<?php wplp_editable_text('free1_text_1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A rem cumque officia quisquam, recusandae est, tenetur iusto debitis esse aspernatur optio deserunt nostrum ipsa enim commodi tempore quo alias eaque.'); ?>
+					<div class="col-md-5">
+						<div class="bloc bloc-editor">
+							<?php wplp_editable_text('free1_text_1', '<h1>Page Title</h1><p>Here your content or place a shortcode to display a contact fomulaire or otherwise.</p><button type="submit">Call To Action</button>'); ?>
 						</div>
 					</div>
-					<div class="col-md-12">
-						<div class="bloc bloc-editor sticky-img">
+
+					<div class="col-md-7">
+						<div class="bloc bloc-editor">
 							<?php wplp_editable_text('free1_text_2', '<img src="'.plugins_url( 'images/smartphone.png', dirname(dirname(__FILE__))).'">'); ?>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
 	</div>
 
-	<section class="presentation top-line-bg top-line-text">
+	<section class="presentation top-line top-line-text top-line-bg">
 		<div class="container">
-			<div class="bloc bloc-editor"><?php wplp_editable_text('free1_text_presentation', 'Text of presentation.'); ?></div>
+			<div class="bloc bloc-editor"><?php wplp_editable_text('free1_text_presentation', 'Place here your text of presentation.'); ?></div>
 		</div>
 	</section>
 
