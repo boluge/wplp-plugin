@@ -11,7 +11,6 @@ class WPLP_Updater {
 	private $github_response;
 
 	public function __construct( $file ) {
-
 		$this->file = $file;
 		add_action( 'admin_init', array( $this, 'set_plugin_properties' ) );
 		return $this;
@@ -52,7 +51,6 @@ class WPLP_Updater {
 	        if( $this->authorize_token ) { // Is there an access token?
 	            $response['zipball_url'] = add_query_arg( 'access_token', $this->authorize_token, $response['zipball_url'] ); // Update our zip url with token
 	        }
-
 	        $this->github_response = $response; // Set it to our property
 	    }
 	}
