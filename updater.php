@@ -2,27 +2,18 @@
 class WPLP_Updater {
 
 	private $file;
-
 	private $plugin;
-
 	private $basename;
-
 	private $active;
-
 	private $username;
-
 	private $repository;
-
 	private $authorize_token;
-
 	private $github_response;
 
 	public function __construct( $file ) {
 
 		$this->file = $file;
-
 		add_action( 'admin_init', array( $this, 'set_plugin_properties' ) );
-
 		return $this;
 	}
 
@@ -77,17 +68,13 @@ class WPLP_Updater {
 		if( property_exists( $transient, 'checked') ) { // Check if transient has a checked property
 
 			if( $checked = $transient->checked ) { // Did Wordpress check for updates?
-
 				$this->get_repository_info(); // Get the repo info
-
 				$out_of_date = version_compare( $this->github_response['tag_name'], $checked[ $this->basename ], 'gt' ); // Check if we're out of date
 
 				if( $out_of_date ) {
 
 					$new_files = $this->github_response['zipball_url']; // Get the ZIP
-
 					$slug = current( explode('/', $this->basename ) ); // Create valid slug
-
 					$plugin = array( // setup our plugin info
 						'url' => $this->plugin["PluginURI"],
 						'slug' => $slug,
@@ -106,11 +93,8 @@ class WPLP_Updater {
 	public function plugin_popup( $result, $action, $args ) {
 
 		if( ! empty( $args->slug ) ) { // If there is a slug
-
 			if( $args->slug == $this->basename ) { // And it's our slug
-
 				$this->get_repository_info(); // Get our repo info
-
 				// Set it to an array
 				$plugin = array(
 					'name'				=> $this->plugin["Name"],
@@ -127,7 +111,7 @@ class WPLP_Updater {
 					),
 					'download_link'		=> $this->github_response['zipball_url']
 				);
-
+                var_dump($plugin);
 				return (object) $plugin; // Return the data
 			}
 

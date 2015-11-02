@@ -3,8 +3,8 @@
 Plugin Name: WP Landing Page PREMIUM
 Plugin URI: http://www.b5prod.com
 Description: Aditionally Templates for Plugin WP Landing Page
-Version: 0.1.0
-Author: B5 Production
+Version: 1.0.1
+Author: B5 Productions
 Author URI: http://www.b5prod.com
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
